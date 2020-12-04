@@ -30,5 +30,5 @@ def count_trees_second(file_name):
         result *= count_trees
     return result
 
-print(count_trees_first("day_3.txt"))
-print(count_trees_second("day_3.txt"))
+print(count_trees_first("input.txt"))
+print(count_trees_second("input.txt"))

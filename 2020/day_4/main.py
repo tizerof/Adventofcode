@@ -3,8 +3,7 @@ import re
 
 def count_valid_passwords_first(file_name):
     """
-    Find the number of trees with a step
-    of 3 to the right and 1 down.
+    Find the number of passports with valid keys in file.
     """
     passports = open(file_name).read().strip().split('\n\n')
     fields = ("byr", "iyr", "eyr", "hgt", "hcl", "ecl", "pid")
@@ -18,7 +17,10 @@ def count_valid_passwords_first(file_name):
 
 
 def count_valid_passwords_second(file_name):
-    passports = open('2020/day_4.txt').read().strip().split('\n\n')
+    """
+    Find the number of passports with valid values of keys in file.
+    """
+    passports = open(file_name).read().strip().split('\n\n')
     fields = {
         'byr': lambda x: len(x) <= 4 and 2002 >= int(x) >= 1920,
         'iyr': lambda x: len(x) <= 4 and 2020 >= int(x) >= 2010,
@@ -39,5 +41,5 @@ def count_valid_passwords_second(file_name):
     return count
 
 
-print(count_valid_passwords_first("2020/day_4.txt"))
-print(count_valid_passwords_second("2020/day_4.txt"))
+print(count_valid_passwords_first("input.txt"))
+print(count_valid_passwords_second("input.txt"))

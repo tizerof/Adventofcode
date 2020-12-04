@@ -40,6 +40,6 @@ def count_valid_passwords_second(list_of_passwords):
     return sum(result)
 
 
-f = open('day_2.txt')
+f = open('input.txt')
 list_of_passwords = read_passwords(f)
 print(count_valid_passwords_second(list_of_passwords))

@@ -27,7 +27,7 @@ def sum_three_2020(nums):
                 return (2020 - num_1 - num_2)*num_1*num_2
 
 
-f = open('day_1.txt')
+f = open('input.txt')
 nums = read_nums(f)
 print(sum_two_2020(nums))
 print(sum_three_2020(nums))
