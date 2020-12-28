@@ -1,6 +1,3 @@
-from copy import deepcopy
-
-
 def apply_rules_seat(nearby_seats, seat, max):
     """ Checks seating conditions based on nearby seats """
     if seat == "L" and "#" not in nearby_seats:
