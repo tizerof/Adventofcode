@@ -1,7 +1,7 @@
 # https://adventofcode.com/2020/day/2
 
 
-def read_passwords(file):
+def read_passwords(f):
     """
     Reading a file with a list of dictionaries
     with password policy, letter and password.
@@ -43,6 +43,6 @@ def count_valid_passwords_second(list_of_passwords):
     return sum(result)
 
 
-f = open('input.txt')
-list_of_passwords = read_passwords(f)
+list_of_passwords = read_passwords(open('input.txt'))
+print(count_valid_passwords_first(list_of_passwords))
 print(count_valid_passwords_second(list_of_passwords))

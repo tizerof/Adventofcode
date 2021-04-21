@@ -4,6 +4,7 @@
 import re
 from collections import defaultdict
 
+
 def contained_in(color):
     """ Count how many bag colors can eventually
     contain at least one input color bag.

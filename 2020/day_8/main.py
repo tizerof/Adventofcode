@@ -3,6 +3,7 @@
 
 import re
 
+
 def find_acc(instructions):
     """ Find value in the accumulator with error or not.
     Returns:

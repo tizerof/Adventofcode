@@ -9,6 +9,8 @@ def count_valid_passwords_first(file_name):
     Find the number of passports with valid keys in file.
     """
     passports = open(file_name).read().strip().split('\n\n')
+    if len(passports[0]) == 0:
+        return 0
     fields = ("byr", "iyr", "eyr", "hgt", "hcl", "ecl", "pid")
     count = 0
     for passport in passports:
@@ -24,6 +26,8 @@ def count_valid_passwords_second(file_name):
     Find the number of passports with valid values of keys in file.
     """
     passports = open(file_name).read().strip().split('\n\n')
+    if len(passports[0]) == 0:
+        return 0
     fields = {
         'byr': lambda x: len(x) <= 4 and 2002 >= int(x) >= 1920,
         'iyr': lambda x: len(x) <= 4 and 2020 >= int(x) >= 2010,

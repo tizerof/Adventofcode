@@ -1,3 +1,6 @@
+# https://adventofcode.com/2020/day/11
+
+
 def apply_rules_seat(nearby_seats, seat, max):
     """ Checks seating conditions based on nearby seats """
     if seat == "L" and "#" not in nearby_seats:
@@ -27,7 +30,7 @@ def model_people():
     """ Simulates the seating of people
     according to simple rules sitting nearby.
     """
-    layout = [line for line in open("input.txt").read().splitlines()]
+    layout = open("input.txt").read().splitlines()
     count_occupied_seats = 0
     while True:
         layout_new = []
@@ -57,7 +60,7 @@ def model_people_second():
     """ Simulates the seating of people according to
     rules sitting visibility in in each eight directions.
     """
-    layout = [line for line in open("input.txt").read().splitlines()]
+    layout = open("input.txt").read().splitlines()
     count_occupied_seats = 0
     while True:
         layout_new = []
